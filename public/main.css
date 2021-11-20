@@ -107,6 +107,7 @@ body {
     text-align: center;
 }
 
+/* Animation */
 .fade-enter {
     opacity: 0;
 }
@@ -135,8 +136,9 @@ body {
     width: 100%;
 }
 
-
-.reset-btn:active, .reset-btn:focus, .reset-btn:hover {
+.reset-btn:active,
+.reset-btn:focus,
+.reset-btn:hover {
     border: 0;
     outline: 0;
 }

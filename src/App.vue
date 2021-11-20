@@ -1,16 +1,19 @@
 <template>
   <div class="ctr">
 
-    <Questions v-if="questionsAnswered < questions.length"
-               :questionsProp="questions"
-               :questionsAnsweredProp="questionsAnswered"
-               @question-answered="questionsAnsweredFn"
-    />
+    <!-- add animation  -->
+    <transition name="fade" mode="out-in">
+      <Questions v-if="questionsAnswered < questions.length"
+                 :questionsProp="questions"
+                 :questionsAnsweredProp="questionsAnswered"
+                 @question-answered="questionsAnsweredFn"
+      />
 
-    <Result v-else
-            :resultsProp="results"
-            :totalCorrectProp="totalCorrect"
-    />
+      <Result v-else
+              :resultsProp="results"
+              :totalCorrectProp="totalCorrect"
+      />
+    </transition>
 
     <!-- Add reset button after quiz complete -->
     <button type="button"

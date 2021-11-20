@@ -9,24 +9,28 @@
         {{ questionsProp.length }} questions answered
       </div>
     </div>
-    <div class="single-question"
-         v-for="(question, questionIndex) in questionsProp"
-         :key="question.q"
-         v-show="questionsAnsweredProp === questionIndex"
-    >
-      <div class="question">
-        {{ question.q }}
-      </div>
-      <div class="answers">
-        <div class="answer"
-             v-for="answer in question.answers"
-             :key="answer.text"
-             @click.prevent="selectAnswer(answer.is_correct)"
-        >
-          {{ answer.text }}
+
+    <!-- add animation  -->
+    <transition-group name="fade">
+      <div class="single-question"
+           v-for="(question, questionIndex) in questionsProp"
+           :key="question.q"
+           v-show="questionsAnsweredProp === questionIndex"
+      >
+        <div class="question">
+          {{ question.q }}
+        </div>
+        <div class="answers">
+          <div class="answer"
+               v-for="answer in question.answers"
+               :key="answer.text"
+               @click.prevent="selectAnswer(answer.is_correct)"
+          >
+            {{ answer.text }}
+          </div>
         </div>
       </div>
-    </div>
+    </transition-group>
 
     <br/>
     <br/>
