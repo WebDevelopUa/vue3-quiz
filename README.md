@@ -1,9 +1,12 @@
 Vue v3 Quiz App
 ---
 
-[HTML and Static Assets](https://cli.vuejs.org/guide/html-and-static-assets.html)
+### [DEMO](https://vue3-quiz.vercel.app)
 
-* [ru](https://cli.vuejs.org/ru/guide/html-and-static-assets.html)
+---
+
+[HTML and Static Assets](https://cli.vuejs.org/guide/html-and-static-assets.html)
+/ [translation](https://cli.vuejs.org/ru/guide/html-and-static-assets.html)
 
 -----
 
