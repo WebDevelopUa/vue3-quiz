@@ -7,7 +7,10 @@
                @question-answered="questionsAnsweredFn"
     />
 
-    <Result v-else/>
+    <Result v-else
+            :resultsProp="results"
+            :totalCorrectProp="totalCorrect"
+    />
 
     <button type="button" class="reset-btn">Reset</button>
   </div>
